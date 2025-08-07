@@ -1,0 +1,228 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: 'Orbitron', sans-serif;
+}
+
+.intro {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background: linear-gradient(135deg, #eaffea, #76ffb4);
+}
+
+h1 {
+  color: #000000;
+  font-size: 2rem;
+  letter-spacing: 2px;
+}
+
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: 'Orbitron', sans-serif;
+  height: 100%;
+  background: linear-gradient(135deg, #eaffea, #c6ffe0);
+}
+
+header {
+  display: flex;
+  align-items: center;
+  background: linear-gradient(to right, #aeeec2, #dafbe8);
+  padding: 15px 20px;
+  color: #629c58;
+  font-family: 'VT323', monospace;
+  font-size: 1.5rem;
+}
+
+.menu {
+  font-size: 2rem;
+  margin-right: 15px;
+  cursor: pointer;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: calc(100vh - 60px);
+}
+
+.card {
+  background-color: #6bd897;
+  padding: 40px;
+  border-radius: 25px;
+  width: 80%;
+  max-width: 800px;
+  text-align: center;
+  box-shadow: 0 8px 20px rgba(195, 255, 136, 0.279);
+  position: relative;
+}
+
+.card h1 {
+  color: white;
+  font-size: 3rem;
+  margin-bottom: 40px;
+  text-shadow: 1px 1px 3px rgba(136, 252, 97, 0.452);
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+}
+
+.btn {
+  background: linear-gradient(to bottom, #65ffa2, white);
+  padding: 30px 40px;
+  border-radius: 30px;
+  font-family: 'VT323', monospace;
+  font-size: 1.5rem;
+  text-decoration: none;
+  color: #0b1a11;
+  box-shadow: 2px 2px 6px rgba(2, 2, 2, 0.231);
+  transition: transform 0.2s ease;
+}
+
+.btn:hover {
+  transform: scale(1.05);
+}
+
+/* Sidebar - hidden by default, slides in from the left */
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 300px;
+  height: 100%;
+  background: linear-gradient(to bottom, #88ff90e9, #ffffff);
+  border-top-right-radius: 40px;
+  border-bottom-right-radius: 40px;
+  padding: 30px;
+  transform: translateX(-100%);
+  transition: transform 0.4s ease;
+  z-index: 30;
+  font-family: 'VT323', monospace;
+  font-size: 1.5rem;
+  box-shadow: 5px 0 10px rgba(37, 94, 158, 0);
+}
+
+.sidebar.open {
+  transform: translateX(0);
+}
+
+/* Dark overlay (hidden by default) */
+.overlay {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(5, 5, 5, 0.505); 
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease;
+  z-index: 20;
+}
+
+/* When overlay is visible */
+.overlay.visible {
+  opacity: 1;
+  visibility: visible;
+}
+
+
+body.intro-active {
+  overflow: hidden;
+}
+
+.center-button {
+    text-align: center;
+    margin-top: 30px;
+}
+
+#detailsBtn {
+    background-color: #52c155;
+    color: rgb(255, 255, 255);
+    padding: 12px 24px;
+    font-size: 16px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.content-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  width: 90%;
+  max-width: 1200px;
+  margin: 20px auto;
+  flex-wrap: wrap; /* stack on small screens */
+}
+
+.camera-frame {
+  position: relative;
+  flex: 1;
+  min-width: 300px;
+  height: 400px;
+  background: black;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.camera-frame iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+.live-label {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  background: red;
+  color: white;
+  padding: 5px 15px;
+  border-radius: 20px;
+  font-family: 'VT323', monospace;
+  font-size: 1.2rem;
+}
+
+.live-label.thermal {
+  background: #ff6600; /* orange for thermal */
+}
+
+/* Status box */
+.status-box {
+  width: 289px;
+  height: 80px;
+  background: #75ce96;
+  border-radius: 20px;
+  color: white;
+  font-size: 1.3rem;
+  font-family: 'VT323', monospace;
+  display: flex;
+  position: relative;
+  left: 540px;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
+/* Exit button */
+.exit-btn {
+  display: inline-block;
+  margin-top: 30px;
+  background: #77c694;
+  color: white;
+  padding: 10px 30px;
+  border-radius: 30px;
+  font-family: 'VT323', monospace;
+  text-decoration: none;
+  font-size: 1.2rem;
+}
+.exit-btn:hover {
+  background: #5ba479;
+}
